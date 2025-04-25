@@ -437,7 +437,7 @@ class App extends Component {
     target="_blank" 
     rel="noopener noreferrer"
   >
-    Made by Jannat Faisal
+    Made by Muhammad Ali 
   </a>
 </p>
         </div>
