@@ -1,53 +1,231 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f7fa;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
   padding: 20px;
   color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.App-logo {
+  height: 60px;
+  pointer-events: none;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 1.8em;
+  margin-top: 10px;
 }
 
-.App-intro {
-  font-size: large;
+.user-info {
+  margin-top: 10px;
+  font-size: 0.9em;
+  opacity: 0.8;
 }
 
-.loginForm{
-  padding: 50px;
-  margin: 0 auto;
-  height: 500px;
-  width: 500px;
+/* Login Styles */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
 }
 
-.loginFormHeader{
-  color: brown;
+.login-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
 }
 
-.todoHeader{
-  font-size: 50px;
+.login-title {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 1.8em;
 }
 
-.renderTodoList{
-  margin: 0 ,auto;
-  padding: 10px;
+.login-form {
+  text-align: left;
 }
 
-.centerAll{
-  text-align: center;
+.form-group {
+  margin-bottom: 20px;
 }
 
-.addEmployeeForm{
-  margin: 0px 10px 10px 10px;
+.form-control {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #3498db;
+  border: none;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Main Content */
+.main-content {
+  padding: 30px 0;
+  flex-grow: 1;
+}
+
+.page-title {
+  color: #2c3e50;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.add-employee-btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Table Styles */
+.employee-table {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.employee-table th {
+  font-weight: 600;
+  background-color: #2c3e50;
+  color: white;
+}
+
+.employee-row:hover {
+  background-color: #f8f9fa;
+}
+
+.actions {
+  white-space: nowrap;
+}
+
+/* Add Employee Form */
+.add-employee-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  flex-grow: 1;
+}
+
+.add-employee-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.add-employee-form {
+  text-align: left;
+}
+
+.add-employee-form label {
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+/* Logout */
+.logout-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logout-btn {
+  padding: 8px 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.credits {
+  color: #7f8c8d;
+  font-size: 14px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.credits:hover {
+  color: #9b59b6;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Edit Row */
+.edit-row {
+  background-color: #f8f9fa;
+}
+
+.edit-row input {
+  max-width: 150px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .employee-table {
+    font-size: 14px;
+  }
+  
+  .actions button {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+  
+  .page-title {
+    font-size: 1.5em;
+  }
+  
+  .add-employee-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
 }
 
 @keyframes App-logo-spin {
